@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Manna",
+  "description": "Dashboard with daily bible verse",
+  "version": "1.2.3",
+  "browser_action": {
+    "default_title": "Manna",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "main.html"
+  },
+  "permissions": ["identity", "identity.email"],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuPUynYWcQiNi91qCNhWIlKxqYaG+893a4quemDNiESXXBusoifyjV15swdgK8KnhpoWL9ol9acSsK9Jtqaqa/HWdvLnXYBrHWXsKHZjlbpjJ6bcW9kinZbuW4h9+ErEr+kb427fh1Q+tR3YwVXxurFjssmQum+li6XzGUJhF8763/q7sL4dGWjmGe51cxadj1uXfb0R5xAySN5ort591K0ZWrIIq4WMP5hSCrb436xBSJ+JasQwnpELQbIY2BLZNCUCfLuLcUNtcJt9VAFCCvXrluInjruRCXNyAJsBoIm+sz24XerAok6PYwbgkaOtvQtZZnTtQ/TiQtqNuJptwqQIDAQAB",
+  "oauth2": {
+    "client_id": "424209103813-ei0ju551ljolniv6fva9j5603g3i6df7.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/drive"]
+  }
+}

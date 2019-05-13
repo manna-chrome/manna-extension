@@ -1,0 +1,232 @@
+@import "font";
+$gray: rgba(0, 0, 0, 0.4);
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-family: "Quattrocento Sans", cursive;
+  //display: none;
+  //font-size: 100%;
+  font-size: 1.75vh;
+  font-weight: 575;
+  div {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    color: white;
+  }
+  #image-wrapper {
+    z-index: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    #background-image {
+      display: none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      box-shadow: inset 0 0 200px black;
+    }
+  }
+  #clock {
+    position: fixed;
+    z-index: 2;
+    top: 1vh;
+    left: 35%;
+    width: 30%;
+    text-align: center;
+    font-size: 3em;
+  }
+  #daily-verse {
+    position: fixed;
+    z-index: 2;
+    width: 80%;
+    height: 15vh;
+    left: 10%;
+    top: 35vh;
+    text-align: center;
+    font-style: italic;
+    #text {
+      font-size: 3em;
+    }
+    #reference {
+      font-size: 1.5em;
+      padding-top: 10px;
+    }
+    &:hover {
+      cursor: context-menu;
+    }
+  }
+  .gratitude {
+    z-index: 2;
+    position: fixed;
+    height: 12vh;
+    width: 80%;
+    left: 10%;
+    top: 85vh;
+    font-size: 2.5em;
+    text-align: center;
+  }
+  #stored-gratitude {
+    display: none;
+    text-align: center;
+    //font-size: 5vw;
+    #response {
+      //font-size: 35px;
+    }
+  }
+  .text-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid white;
+    //border-radius: 5px;
+    //box-shadow: 0 1px $gray;
+    color: white;
+    text-align: center;
+    &:focus {
+      outline: none;
+    }
+    &::selection {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 5px;
+    }
+  }
+  #daily-gratitude {
+    #grateful-input {
+      margin: 0 50px;
+      width: 350px;
+      font-size: 1em;
+      padding: 0px 5px;
+      font-family: "Quattrocento Sans", cursive;
+    }
+  }
+  #daily-examen {
+    width: 250px;
+    height: 5vh;
+    position: fixed;
+    z-index: 2;
+    left: calc(50% - 125px);
+    top: 93vh;
+    #start-daily-examen {
+      display: none;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      font-size: 1.1em;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      border: 1px solid white;
+      &:active {
+        color: rgb(184, 184, 184);
+        border-color: rgb(184, 184, 184);
+        background-color: rgba(0, 0, 0, 0.8);
+        outline: none;
+      }
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}
+
+#daily-examen-page {
+  position: fixed;
+  top: 15vh;
+  height: 50vh;
+  left: 7.5%;
+  width: 85%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  // border-radius: 15px;
+  border: 1px solid white;
+  .examen-step {
+    display: none;
+  }
+  .description {
+    text-align: left;
+    font-size: 1.5vw;
+    margin: 30px 50px 10px 50px;
+  }
+  #close-daily-examen {
+    padding: 7px;
+    float: right;
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(255, 0, 0, 0.3);
+    }
+    &:active {
+      background-color: rgba(78, 0, 0, 0.3);
+    }
+  }
+  .label {
+    position: relative;
+    height: 10vh;
+    top: 5vh;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+  }
+  .btn-wrapper {
+    position: absolute;
+    bottom: 2vh;
+    left: 35%;
+    height: 5vh;
+    width: 30%;
+  }
+  .btn {
+    width: 35%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      color: rgb(184, 184, 184);
+      border-color: rgb(184, 184, 184);
+      background-color: rgba(0, 0, 0, 0.3);
+      outline: none;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  .prev-btn {
+    float: left;
+  }
+  .next-btn {
+    float: right;
+  }
+}
+
+#homepage {
+  // display: none;
+}

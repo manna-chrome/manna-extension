@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>New Tab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="lib/fontawesome-free-5.7.2-web/css/all.css" />
+    <script src="js/api.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/daily_examen.js"></script>
+    <script src="js/gratitude.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="image-wrapper">
+        <img id="background-image" src="" />
+      </div>
+      <div id="homepage">
+        <div id="clock"></div>
+        <div id="daily-gratitude" class="gratitude">
+          <form id="gratitude-form" autocomplete="off">
+            <div id="input-label">What are you grateful for today?</div>
+            <input type="text" id="grateful-input" class="text-input" />
+          </form>
+          <div id="stored-gratitude">Today, you said you were grateful for...
+            <div id="response"></div>
+          </div>
+        </div>
+        <div id="daily-verse">
+          <div id="text"></div>
+          <div id="reference"></div>
+        </div>
+        
+        <div id="daily-examen">
+          <button id="start-daily-examen">
+            <span>Start The Daily Examen</span>
+          </button>
+        </div>
+      </div>
+      <div id="daily-examen-page">
+        <i id="close-daily-examen" class="fas fa-times fa-2x"></i>
+        <form>
+          <div id="introduction" class="examen-step">
+            <div class="label">
+              The Daily Examen
+            </div>
+            <div class="description">
+              <p>
+                The Daily Examen is the practice of prayerful reflection to
+                become more aware of God's presence in our daily lives. It was
+                originally designed for the Jesuit Order by St. Ignatius to help
+                followers of Christ see God's hand at work. Throughout this
+                practice, he encouraged people to engage with Jesus like a
+                friend.
+              </p>
+              <p>
+                Take a moment to find a quiet place and slow down from the
+                busyness of the day.
+              </p>
+            </div>
+            <div class="btn-wrapper">
+              <button class="btn next-btn">
+                <i class="fas fa-angle-right fa-2x"></i>
+              </button>
+            </div>
+          </div>
+          <div id="step-1" class="examen-step">
+            <div class="label">
+              Become aware of God's presence
+            </div>
+            <div class="description">
+              <p>Invite God to enter into this space.</p>
+              <p>
+                List characteristics of God and pray for the Holy Spirit to
+                accompany you in this time of reflection.
+              </p>
+              <p>
+                If the day seems confusing or a blur to you, take a moment and
+                ask God to bring clarity and understanding.
+              </p>
+            </div>
+            <div class="btn-wrapper">
+              <button class="btn prev-btn">
+                <i class="fas fa-angle-left fa-2x"></i>
+              </button>
+              <button class="btn next-btn">
+                <i class="fas fa-angle-right fa-2x"></i>
+              </button>
+            </div>
+          </div>
+          <div id="step-2" class="examen-step">
+            <div class="label">
+              Review the day with gratitude
+            </div>
+            <div class="description">
+              <p>
+                Gratitude is a core aspect in our relationship with God.
+              </p>
+              <p>
+                Walk through your day in the presence of God and note its joys
+                and delights. Focus on the day's gifts. Examine the work that
+                you did and the people you interacted with. What did you receive
+                from these people, and what did you give them? Pay attention to
+                your emotions and the small things. God is in the details.
+              </p>
+            </div>
+            <div class="btn-wrapper">
+              <button class="btn prev-btn">
+                <i class="fas fa-angle-left fa-2x"></i>
+              </button>
+              <button class="btn next-btn">
+                <i class="fas fa-angle-right fa-2x"></i>
+              </button>
+            </div>
+          </div>
+          <div id="question-1" class="examen-step">
+            <div class="label">
+              Looking back on the day, when did you feel closest to God?
+            </div>
+            <!-- <input class="examen-input text-input" type="text" /> -->
+            <div class="btn-wrapper">
+              <button class="btn prev-btn">
+                <i class="fas fa-angle-left fa-2x"></i>
+              </button>
+              <button class="btn next-btn">
+                <i class="fas fa-angle-right fa-2x"></i>
+              </button>
+            </div>
+          </div>
+          <div id="step-3" class="examen-step">
+            <div class="label">
+              Give thanks to God for those moments
+            </div>
+            <div class="btn-wrapper">
+              <button class="btn prev-btn">
+                <i class="fas fa-angle-left fa-2x"></i>
+              </button>
+              <button class="btn next-btn">
+                <i class="fas fa-angle-right fa-2x"></i>
+              </button>
+            </div>
+          </div>
+          <div id="question-2" class="examen-step">
+            <div class="label">
+              Looking back on the day, when did you feel furthest from God or
+              failed to show His love to others?
+            </div>
+            <!-- <input class="examen-input text-input" type="text" /> -->
+            <div class="btn-wrapper">
+              <button class="btn prev-btn">
+                <i class="fas fa-angle-left fa-2x"></i>
+              </button>
+              <button class="btn next-btn">
+                <i class="fas fa-angle-right fa-2x"></i>
+              </button>
+            </div>
+          </div>
+          <div id="step-4" class="examen-step">
+            <div class="label">
+              Ask God for fogiveness and healing in any shortcomings
+            </div>
+            <div class="btn-wrapper">
+              <button class="btn prev-btn">
+                <i class="fas fa-angle-left fa-2x"></i>
+              </button>
+              <button class="btn next-btn">
+                <i class="fas fa-angle-right fa-2x"></i>
+              </button>
+            </div>
+          </div>
+          <div id="step-5" class="examen-step">
+            <div class="label">
+              Look towards tomorrow
+            </div>
+            <div class="description">
+              <p>
+                Ask God to give you light and discernment for tomorrow's
+                challenges.
+              </p>
+              <p>
+                Pay attention to any feelings surfacing up as you survey what's
+                coming up. Are you fearful? Cheerful? Apprehensive? Delighted?
+                Turn these feelings into prayer, and seek God's guidance. Pray
+                for understanding and hope.
+              </p>
+            </div>
+            <div class="btn-wrapper">
+              <button class="btn prev-btn">
+                <i class="fas fa-angle-left fa-2x"></i>
+              </button>
+              <button class="btn next-btn">
+                <i class="fas fa-angle-right fa-2x"></i>
+              </button>
+            </div>
+          </div>
+            <div id="step-6" class="examen-step">
+              <div class="label">
+                Conclude with the Lord's Prayer
+              </div>
+              <div class="description">
+                <p>
+                  Our Father in Heaven, hallowed be your name, you kingdom come,
+                  your will be done, on earth as it is in Heaven.
+                </p>
+                <p>
+                  Give us today our daily bread.
+                </p>
+                <p>
+                  And forgive us our debts, as we also have forgiven our
+                  debtors.
+                </p>
+                <p>
+                  And lead us not into temptation, but deliver us from the evil
+                  one.
+                </p>
+              </div>
+              <div class="btn-wrapper">
+                <button class="btn prev-btn">
+                  <i class="fas fa-angle-left fa-2x"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

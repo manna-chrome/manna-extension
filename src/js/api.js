@@ -1,5 +1,10 @@
-// const HOST = "http://localhost:7777/manna";
-const HOST = "https://manna-chrome-extension.herokuapp.com/manna";
+const dev = true;
+let HOST;
+if (dev) {
+  HOST = "http://localhost:7777/manna";
+} else {
+  HOST = "https://manna-chrome-extension.herokuapp.com/manna";
+}
 let img_src;
 function getVerse() {
   if (localStorage.getItem("text") && localStorage.getItem("reference")) {
